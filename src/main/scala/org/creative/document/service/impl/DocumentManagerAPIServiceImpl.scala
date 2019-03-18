@@ -6,7 +6,7 @@ import com.outworkers.phantom.connectors.KeySpace
 import org.creative.document.dao.impl.{CustomerDaoImpl, DocumentDaoImpl}
 import org.creative.document.database.phantomDBConnection
 import org.creative.document.entity.QueryType.QueryType
-import org.creative.document.entity.{Customer, Document, DocumentSearchCriteria, QueryType}
+import org.creative.document.entity._
 import org.creative.document.service.DocumentManagerAPIService
 
 import scala.concurrent.ExecutionContext
@@ -54,9 +54,9 @@ class DocumentManagerAPIServiceImpl extends DocumentManagerAPIService {
     }
   }
 
-  def searchCustomerByCustomerId(customerId: UUID, queryType: QueryType): Unit = {
+  def searchCustomers(customerSearchCriteria: CustomerSearchCriteria): Seq[Customer] ={
     if(queryType.equals(QueryType.Native)){
-      //CustomerDaoImpl.createCustomer(customer)
+
     }else if(queryType.equals(QueryType.Elasticsearch)){
 
     }else{

@@ -1,9 +1,7 @@
 package org.creative.document.service
 
-import java.util.UUID
-
 import org.creative.document.entity.QueryType.QueryType
-import org.creative.document.entity.{Customer, Document, DocumentSearchCriteria}
+import org.creative.document.entity.{Customer, CustomerSearchCriteria, Document, DocumentSearchCriteria}
 
 trait DocumentManagerAPIService {
 
@@ -13,6 +11,6 @@ trait DocumentManagerAPIService {
 
   def createCustomer(customer: Customer, queryType: QueryType): Unit
 
-  def searchCustomers(customerId: UUID, queryType: QueryType): Unit
+  def searchCustomers(customerSearchCriteria: CustomerSearchCriteria): Seq[Customer]
 
 }

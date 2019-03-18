@@ -4,8 +4,8 @@ object QueryType extends Enumeration {
 
   type QueryType = Value
 
-  val Native      = Value("Native")//cql make all enumerations capital
-  val Elasticsearch  = Value("Elasticsearch")
-  val Phantom       = Value("Phantom")
+  val NATIVE      = Value("Native")//cql make all enumerations capital
+  val ELASTICSEARCH  = Value("Elasticsearch")
+  val PHANTOM       = Value("Phantom")
 
 }

@@ -8,5 +8,4 @@ case class Customer (  customerId: UUID,
                        vatNo: String,
                        taxNo: String,
                        country: String,
-                       countryCode: String
-                    )
+                       countryCode: String)
